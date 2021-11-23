@@ -30,7 +30,7 @@ public class ToDoList {
                 delete(scanner);
             } else if (action.equals("edit")) {
                 edit(scanner);
-            }else if (action.equals("quit")) {
+            } else if (action.equals("quit")) {
                 quit();
             } else {
                 System.out.println("Данной команды не существует");
@@ -39,8 +39,6 @@ public class ToDoList {
         }
     }
 
-    private static void edit() {
-    }
 
     private static void add(Scanner scanner) {
         String line = scanner.nextLine().trim();
@@ -79,7 +77,7 @@ public class ToDoList {
     }
 
     public static void printTask(Map.Entry<String, Task> entry) {
-        System.out.printf("%s, [%s] %s\n", entry.getKey(),
+        System.out.printf("%s. [%s] %s\n", entry.getKey(),
                 entry.getValue().isDone() ? "x" : " ",
                 entry.getValue().getDescription());
     }
