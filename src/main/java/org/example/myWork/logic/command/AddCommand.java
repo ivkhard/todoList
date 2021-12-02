@@ -1,15 +1,16 @@
 package org.example.myWork.logic.command;
 
 import org.example.myWork.logic.IErrorHandler;
+import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.logic.TaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 
 
-public class AddCommand extends BaseDao {
+public class AddCommand extends BaseCommand {
     public static final String COMMAND = "add";
 
-    protected AddCommand(TaskDao taskDao, IErrorHandler IErrorHandler) {
+    protected AddCommand(ITaskDao taskDao, IErrorHandler IErrorHandler) {
         super(taskDao, IErrorHandler);
     }
 

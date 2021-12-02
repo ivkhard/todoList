@@ -6,7 +6,6 @@ public class ErrorHandlerImpl implements IErrorHandler {
     @Override
     public void handle(String error) {
         System.err.println(error);
-        System.err.flush();
         if (helper) {
             return;
         }

@@ -1,7 +1,7 @@
 package org.example.myWork.logic.command;
 
 import org.example.myWork.logic.IErrorHandler;
-import org.example.myWork.logic.TaskDao;
+import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 
@@ -9,10 +9,10 @@ import org.example.myWork.parser.CommandDescription;
 import java.util.Optional;
 
 
-public class ToggleCommand extends BaseDao {
+public class ToggleCommand extends BaseCommand {
     public static final String COMMAND = "toggle";
 
-    protected ToggleCommand(TaskDao taskDao, IErrorHandler errorHandler) {
+    protected ToggleCommand(ITaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);
     }
 

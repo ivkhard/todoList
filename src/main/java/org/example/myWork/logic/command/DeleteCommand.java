@@ -1,16 +1,16 @@
 package org.example.myWork.logic.command;
 
 import org.example.myWork.logic.IErrorHandler;
-import org.example.myWork.logic.TaskDao;
+import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.parser.CommandDescription;
 
 
 
 
-public class DeleteCommand extends BaseDao {
+public class DeleteCommand extends BaseCommand {
     public static final String COMMAND = "delete";
 
-    protected DeleteCommand(TaskDao taskDao, IErrorHandler errorHandler) {
+    protected DeleteCommand(ITaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);
     }
 

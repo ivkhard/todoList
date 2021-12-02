@@ -15,7 +15,7 @@ public class CommandFactory implements Supplier<Map<String, Consumer<CommandDesc
 
     public CommandFactory(final IErrorHandler errorHandler) {
         Map<String, Consumer<CommandDescription>> map = new HashMap<>();
-        TaskDao taskDao = new TaskDao();
+        ITaskDao taskDao = new TaskDao();
         ITaskPrinter taskPrinter = new TaskPrinter();
         Predicate<CommandDescription> taskIdValidator = new TaskIdValidator(errorHandler);
 

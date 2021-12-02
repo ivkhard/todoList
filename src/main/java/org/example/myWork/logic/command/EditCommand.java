@@ -1,16 +1,16 @@
 package org.example.myWork.logic.command;
 
 import org.example.myWork.logic.IErrorHandler;
-import org.example.myWork.logic.TaskDao;
+import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 
 import java.util.Optional;
 
 
-public class EditCommand extends BaseDao {
+public class EditCommand extends BaseCommand {
     public static final String COMMAND = "edit";
-    protected EditCommand(TaskDao taskDao, IErrorHandler errorHandler) {
+    protected EditCommand(ITaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);
     }
 

@@ -7,7 +7,7 @@ public class Task {
     private static final int DEFAULT_ID = -1;
     private int id = DEFAULT_ID;
     private String description;
-    public boolean done;
+    private boolean done;
 
     public static Task of(String description) {
         Task task = new Task();
