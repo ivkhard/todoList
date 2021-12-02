@@ -2,7 +2,7 @@ package org.example.myWork;
 
 import java.util.Scanner;
 
-public interface CommandInt {
+public interface ICommand {
     String getCommandName();
     void process(Scanner scanner);
 }

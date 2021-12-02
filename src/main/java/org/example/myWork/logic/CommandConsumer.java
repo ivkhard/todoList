@@ -9,9 +9,9 @@ import java.util.function.Supplier;
 
 public class CommandConsumer implements Consumer<CommandDescription> {
     private final Map<String, Consumer<CommandDescription>> commands;
-    private final ErrorHandler errorHandler;
+    private final IErrorHandler errorHandler;
 
-    public CommandConsumer(Supplier<Map<String, Consumer<CommandDescription>>> commandsSupplier, ErrorHandler errorHandler) {
+    public CommandConsumer(Supplier<Map<String, Consumer<CommandDescription>>> commandsSupplier, IErrorHandler errorHandler) {
         commands = commandsSupplier.get();
         this.errorHandler = errorHandler;
     }

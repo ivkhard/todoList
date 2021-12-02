@@ -4,7 +4,7 @@ import org.example.myWork.model.Task;
 
 import java.util.stream.Stream;
 
-public class TaskPrinter implements TaskPrinterInt {
+public class TaskPrinter implements ITaskPrinter {
     @Override
     public void print(Stream<Task> tasks) {
         tasks.forEach(TaskPrinter::printTask);

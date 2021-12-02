@@ -1,18 +1,16 @@
 package org.example.myWork.logic.command;
 
-import org.example.myWork.logic.ErrorHandler;
+import org.example.myWork.logic.IErrorHandler;
 import org.example.myWork.logic.TaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 
 import java.util.Optional;
-import java.util.Scanner;
-import java.util.function.Consumer;
-import java.util.regex.MatchResult;
 
-public class EditCommand extends BaseDaoCommand implements Consumer<CommandDescription> {
+
+public class EditCommand extends BaseDao {
     public static final String COMMAND = "edit";
-    protected EditCommand(TaskDao taskDao, ErrorHandler errorHandler) {
+    protected EditCommand(TaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);
     }
 
@@ -26,9 +24,9 @@ public class EditCommand extends BaseDaoCommand implements Consumer<CommandDescr
         }
         Optional<Task> task = taskDao.get(taskId);
         if (task.isPresent()) {
-            errorHandler.handle("Задачи с таким id не существует");
+            task.get().setDescription(text);
         } else {
-            return;
+            errorHandler.handle("Задачи с таким id не существует");;
         }
     }
 }

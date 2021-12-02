@@ -1,5 +1,5 @@
 package org.example.myWork.logic;
 
-public interface ErrorHandler {
+public interface IErrorHandler {
     void handle(String error);
 }

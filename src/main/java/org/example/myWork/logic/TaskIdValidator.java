@@ -6,9 +6,9 @@ import org.example.myWork.parser.CommandDescription;
 import java.util.function.Predicate;
 
 public class TaskIdValidator implements Predicate<CommandDescription> {
-    private final ErrorHandler errorHandler;
+    private final IErrorHandler errorHandler;
 
-    public TaskIdValidator(ErrorHandler errorHandler) {
+    public TaskIdValidator(IErrorHandler errorHandler) {
         this.errorHandler = errorHandler;
     }
 

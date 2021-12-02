@@ -1,10 +1,12 @@
 package org.example.myWork.logic;
 
-public class ErrorHandlerImpl implements ErrorHandler {
+public class ErrorHandlerImpl implements IErrorHandler {
     private boolean helper;
 
     @Override
     public void handle(String error) {
+        System.err.println(error);
+        System.err.flush();
         if (helper) {
             return;
         }

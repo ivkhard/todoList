@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Task {
-    public static final int DEFAULT_ID = -1;
+    private static final int DEFAULT_ID = -1;
     private int id = DEFAULT_ID;
     private String description;
     public boolean done;

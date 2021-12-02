@@ -1,9 +1,6 @@
 package org.example.myWork.logic.command;
 
-import org.example.myWork.logic.ErrorHandler;
-import org.example.myWork.logic.TaskDao;
-import org.example.myWork.logic.TaskIdValidator;
-import org.example.myWork.logic.TaskPrinter;
+import org.example.myWork.logic.*;
 import org.example.myWork.parser.CommandDescription;
 
 import java.util.Collections;
@@ -16,10 +13,10 @@ import java.util.function.Supplier;
 public class CommandFactory implements Supplier<Map<String, Consumer<CommandDescription>>> {
     private final Map<String, Consumer<CommandDescription>> commands;
 
-    public CommandFactory(final ErrorHandler errorHandler) {
+    public CommandFactory(final IErrorHandler errorHandler) {
         Map<String, Consumer<CommandDescription>> map = new HashMap<>();
         TaskDao taskDao = new TaskDao();
-        TaskPrinter taskPrinter = new TaskPrinter();
+        ITaskPrinter taskPrinter = new TaskPrinter();
         Predicate<CommandDescription> taskIdValidator = new TaskIdValidator(errorHandler);
 
         Consumer<CommandDescription> command = new AddCommand(taskDao, errorHandler);

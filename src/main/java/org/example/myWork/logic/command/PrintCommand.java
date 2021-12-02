@@ -1,20 +1,21 @@
 package org.example.myWork.logic.command;
 
-import org.example.myWork.logic.ErrorHandler;
+import org.example.myWork.logic.IErrorHandler;
+import org.example.myWork.logic.ITaskPrinter;
 import org.example.myWork.logic.TaskDao;
 import org.example.myWork.logic.TaskPrinter;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 
-import java.util.function.Consumer;
+
 import java.util.stream.Stream;
 
-public class PrintCommand extends BaseDaoCommand implements Consumer<CommandDescription> {
+public class PrintCommand extends BaseDao {
     public static final String COMMAND = "print";
 
-    private final TaskPrinter printer;
+    private final ITaskPrinter printer;
 
-    protected PrintCommand(TaskDao taskDao, ErrorHandler errorHandler, TaskPrinter printer) {
+    protected PrintCommand(TaskDao taskDao, IErrorHandler errorHandler, ITaskPrinter printer) {
         super(taskDao, errorHandler);
         this.printer = printer;
     }

@@ -4,6 +4,6 @@ import org.example.myWork.model.Task;
 
 import java.util.stream.Stream;
 
-public interface TaskPrinterInt {
+public interface ITaskPrinter {
     void print(Stream<Task> tasks);
 }

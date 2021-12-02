@@ -5,7 +5,7 @@ import org.example.myWork.model.Task;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public interface TaskInt {
+public interface ITaskDao {
     void save(Task task);
 
     Optional<Task> get(long id);

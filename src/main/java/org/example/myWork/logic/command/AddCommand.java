@@ -1,18 +1,16 @@
 package org.example.myWork.logic.command;
 
-import org.example.myWork.logic.ErrorHandler;
+import org.example.myWork.logic.IErrorHandler;
 import org.example.myWork.logic.TaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 
-import java.util.Scanner;
-import java.util.function.Consumer;
 
-public class AddCommand extends BaseDaoCommand implements Consumer<CommandDescription> {
+public class AddCommand extends BaseDao {
     public static final String COMMAND = "add";
 
-    protected AddCommand(TaskDao taskDao, ErrorHandler errorHandler) {
-        super(taskDao, errorHandler);
+    protected AddCommand(TaskDao taskDao, IErrorHandler IErrorHandler) {
+        super(taskDao, IErrorHandler);
     }
 
     @Override

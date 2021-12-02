@@ -1,6 +1,5 @@
 package org.example.myWork.logic;
 
-import org.example.myWork.logic.TaskInt;
 import org.example.myWork.model.Task;
 
 import java.util.ArrayList;
@@ -9,14 +8,14 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class TaskDao implements TaskInt {
+public class TaskDao implements ITaskDao {
     private static final List<Task> storage = new ArrayList<>();
-    private long counter = 0;
+    private int counter = 0;
 
     @Override
     public void save(Task task) {
         counter++;
-        task.setId((int) counter);
+        task.setId(counter);
         storage.add(task);
     }
 
@@ -39,13 +38,8 @@ public class TaskDao implements TaskInt {
 
     @Override
     public void delete(int id) {
-        for (Iterator<Task> i = storage.listIterator(); i.hasNext(); ) {
-            Task t = i.next();
-            if (t.getId() == id) {
-                i.remove();
-                break;
-            }
-        }
+        storage.removeIf(task -> task.getId() == id);
     }
 }
+
 
