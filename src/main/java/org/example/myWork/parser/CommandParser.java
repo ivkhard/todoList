@@ -1,13 +1,17 @@
 package org.example.myWork.parser;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Slf4j
 public class CommandParser implements Function<String, CommandDescription> {
     private static final Pattern COMMAND_PATTERN = Pattern.compile("\\s*(?<cmd>\\w+)(?:\\s+(?<args>(?:(?<id>\\d+)\\b)?(?<text>.*)))?");
 
     public CommandDescription apply(String commandLine) {
+        log.debug("User input: {}", commandLine);
         Matcher matcher = COMMAND_PATTERN.matcher(commandLine);
         if (matcher.find()) {
             CommandDescription.CommandDescriptionBuilder builder = CommandDescription.builder()
@@ -16,7 +20,11 @@ public class CommandParser implements Function<String, CommandDescription> {
                     .text(matcher.group("text"));
             String taskId = matcher.group("id");
             if (taskId != null) {
-                builder.taskId(Long.parseLong(taskId));
+                try {
+                    builder.taskId(Long.parseLong(taskId));
+                } catch (NumberFormatException e) {
+                    log.error("Cannot parse: {}", taskId, e);
+                }
             }
             return builder.build();
         }
