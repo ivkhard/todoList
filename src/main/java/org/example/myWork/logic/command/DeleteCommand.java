@@ -3,10 +3,9 @@ package org.example.myWork.logic.command;
 import org.example.myWork.logic.IErrorHandler;
 import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.parser.CommandDescription;
+import org.springframework.stereotype.Component;
 
-
-
-
+@Component
 public class DeleteCommand extends BaseCommand {
     public static final String COMMAND = "delete";
 

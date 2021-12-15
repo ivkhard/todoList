@@ -5,8 +5,11 @@ import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.logic.ITaskPrinter;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
+import org.springframework.stereotype.Component;
+
 import java.util.stream.Stream;
 
+@Component
 public class SearchCommand extends BaseCommand {
     public static final String COMMAND = "search";
     private final ITaskPrinter printer;

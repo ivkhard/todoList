@@ -1,5 +1,8 @@
 package org.example.myWork.logic;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ErrorHandlerImpl implements IErrorHandler {
     private boolean helper;
 

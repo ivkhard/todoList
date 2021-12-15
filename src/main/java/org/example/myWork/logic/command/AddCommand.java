@@ -5,8 +5,9 @@ import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.logic.TaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class AddCommand extends BaseCommand {
     public static final String COMMAND = "add";
 

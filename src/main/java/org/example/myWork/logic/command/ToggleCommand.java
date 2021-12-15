@@ -4,11 +4,12 @@ import org.example.myWork.logic.IErrorHandler;
 import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
+import org.springframework.stereotype.Component;
 
 
 import java.util.Optional;
 
-
+@Component
 public class ToggleCommand extends BaseCommand {
     public static final String COMMAND = "toggle";
 

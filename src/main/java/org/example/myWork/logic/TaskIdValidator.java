@@ -1,10 +1,12 @@
 package org.example.myWork.logic;
 
 import org.example.myWork.parser.CommandDescription;
+import org.springframework.stereotype.Component;
 
 
 import java.util.function.Predicate;
 
+@Component
 public class TaskIdValidator implements Predicate<CommandDescription> {
     private final IErrorHandler errorHandler;
 

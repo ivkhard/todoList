@@ -2,6 +2,7 @@ package org.example.myWork.logic.command;
 
 import org.example.myWork.logic.*;
 import org.example.myWork.parser.CommandDescription;
+import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+@Component
 public class CommandFactory implements Supplier<Map<String, Consumer<CommandDescription>>> {
     private final Map<String, Consumer<CommandDescription>> commands;
 
