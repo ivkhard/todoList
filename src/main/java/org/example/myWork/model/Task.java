@@ -4,7 +4,6 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Data
-@Component
 public class Task {
     private static final int DEFAULT_ID = -1;
     private int id = DEFAULT_ID;

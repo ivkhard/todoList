@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 @Component
-@RequiredArgsConstructor
+
 public class CommandConsumer implements Consumer<CommandDescription> {
     private final Map<String, Consumer<CommandDescription>> commands;
     private final IErrorHandler errorHandler;
