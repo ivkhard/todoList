@@ -1,4 +1,4 @@
-2021-15-15 17:15:16.397 [main] INFO  org.springframework.boot.SpringApplication - 
+2021-16-16 14:16:01.073 [main] INFO  org.springframework.boot.SpringApplication - 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -8,105 +8,111 @@
  :: Spring Boot ::                (v2.6.1)
 
 
-2021-15-15 17:15:21.456 [main] WARN  org.springframework.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
-2021-15-15 17:15:26.463 [main] INFO  org.example.myWork.ToDoListApplication - Starting ToDoListApplication using Java 1.8.0_302 on MacBook-Pro-BSC.local with PID 8122 (/Users/bsc/IdeaProjects/todoList/target/classes started by bsc in /Users/bsc/IdeaProjects/todoList)
-2021-15-15 17:15:26.464 [main] DEBUG org.example.myWork.ToDoListApplication - Running with Spring Boot v2.6.1, Spring v5.3.13
-2021-15-15 17:15:26.464 [main] INFO  org.example.myWork.ToDoListApplication - No active profile set, falling back to default profiles: default
-2021-15-15 17:15:26.465 [main] DEBUG org.springframework.boot.SpringApplication - Loading source class org.example.myWork.ToDoListApplication
-2021-15-15 17:15:26.510 [main] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1224144a
-2021-15-15 17:15:26.524 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-2021-15-15 17:15:26.538 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
-2021-15-15 17:15:26.593 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/CommandConsumer.class]
-2021-15-15 17:15:26.593 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/ErrorHandlerImpl.class]
-2021-15-15 17:15:26.594 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/TaskDao.class]
-2021-15-15 17:15:26.594 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/TaskIdValidator.class]
-2021-15-15 17:15:26.595 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/TaskPrinter.class]
-2021-15-15 17:15:26.595 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/AddCommand.class]
-2021-15-15 17:15:26.596 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/CommandFactory.class]
-2021-15-15 17:15:26.596 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/DeleteCommand.class]
-2021-15-15 17:15:26.597 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/EditCommand.class]
-2021-15-15 17:15:26.597 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/PrintCommand.class]
-2021-15-15 17:15:26.597 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/QuitCommand.class]
-2021-15-15 17:15:26.598 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/SearchCommand.class]
-2021-15-15 17:15:26.598 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/ToggleCommand.class]
-2021-15-15 17:15:26.599 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/parser/CommandDescription.class]
-2021-15-15 17:15:26.599 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/parser/CommandParser.class]
-2021-15-15 17:15:26.833 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
-2021-15-15 17:15:26.838 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
-2021-15-15 17:15:26.845 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
-2021-15-15 17:15:26.846 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying'
-2021-15-15 17:15:26.846 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
-2021-15-15 17:15:26.851 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-2021-15-15 17:15:26.852 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
-2021-15-15 17:15:26.855 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
-2021-15-15 17:15:26.856 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
-2021-15-15 17:15:26.856 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinderFactory'
-2021-15-15 17:15:26.857 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
-2021-15-15 17:15:26.882 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'toDoListApplication'
-2021-15-15 17:15:26.885 [main] DEBUG org.springframework.core.LocalVariableTableParameterNameDiscoverer - Cannot find '.class' file for class [class org.example.myWork.ToDoListApplication$$EnhancerBySpringCGLIB$$7fd1a5b7] - unable to determine constructor/method parameter names
-2021-15-15 17:15:26.888 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandConsumer'
-2021-15-15 17:15:26.891 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandFactory'
-2021-15-15 17:15:26.892 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'errorHandlerImpl'
-2021-15-15 17:15:26.893 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandFactory' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.895 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'commandFactory'
-2021-15-15 17:15:26.895 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.895 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandParser'
-2021-15-15 17:15:26.903 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toDoListApplication' via constructor to bean named 'commandConsumer'
-2021-15-15 17:15:26.903 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toDoListApplication' via constructor to bean named 'commandParser'
-2021-15-15 17:15:26.903 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDao'
-2021-15-15 17:15:26.904 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskIdValidator'
-2021-15-15 17:15:26.905 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'taskIdValidator' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.905 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskPrinter'
-2021-15-15 17:15:26.906 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'addCommand'
-2021-15-15 17:15:26.906 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'addCommand' via constructor to bean named 'taskDao'
-2021-15-15 17:15:26.906 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'addCommand' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.907 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'deleteCommand'
-2021-15-15 17:15:26.907 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'deleteCommand' via constructor to bean named 'taskDao'
-2021-15-15 17:15:26.907 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'deleteCommand' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.908 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'editCommand'
-2021-15-15 17:15:26.908 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'editCommand' via constructor to bean named 'taskDao'
-2021-15-15 17:15:26.908 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'editCommand' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.909 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'printCommand'
-2021-15-15 17:15:26.910 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'printCommand' via constructor to bean named 'taskDao'
-2021-15-15 17:15:26.910 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'printCommand' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.910 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'printCommand' via constructor to bean named 'taskPrinter'
-2021-15-15 17:15:26.910 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'quitCommand'
-2021-15-15 17:15:26.911 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'searchCommand'
-2021-15-15 17:15:26.911 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'searchCommand' via constructor to bean named 'taskDao'
-2021-15-15 17:15:26.911 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'searchCommand' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.911 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'searchCommand' via constructor to bean named 'taskPrinter'
-2021-15-15 17:15:26.912 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'toggleCommand'
-2021-15-15 17:15:26.912 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toggleCommand' via constructor to bean named 'taskDao'
-2021-15-15 17:15:26.912 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toggleCommand' via constructor to bean named 'errorHandlerImpl'
-2021-15-15 17:15:26.913 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandDescription'
-2021-15-15 17:15:26.914 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
-2021-15-15 17:15:26.914 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
-2021-15-15 17:15:26.915 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
-2021-15-15 17:15:26.918 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
-2021-15-15 17:15:26.918 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
-2021-15-15 17:15:26.918 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationAvailability'
-2021-15-15 17:15:26.920 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
-2021-15-15 17:15:26.921 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
-2021-15-15 17:15:26.921 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
-2021-15-15 17:15:26.922 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
-2021-15-15 17:15:26.922 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'lifecycleProcessor'
-2021-15-15 17:15:26.923 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
-2021-15-15 17:15:26.931 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'lifecycleProcessor' via factory method to bean named 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
-2021-15-15 17:15:26.932 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
-2021-15-15 17:15:26.934 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
-2021-15-15 17:15:26.935 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
-2021-15-15 17:15:26.935 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
-2021-15-15 17:15:26.937 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
-2021-15-15 17:15:26.939 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
-2021-15-15 17:15:26.940 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecutorBuilder'
-2021-15-15 17:15:26.940 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
-2021-15-15 17:15:26.943 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'taskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
-2021-15-15 17:15:26.946 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
-2021-15-15 17:15:26.948 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'scheduledBeanLazyInitializationExcludeFilter'
-2021-15-15 17:15:26.949 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskSchedulerBuilder'
-2021-15-15 17:15:26.950 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
-2021-15-15 17:15:26.951 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'taskSchedulerBuilder' via factory method to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
-2021-15-15 17:15:26.974 [main] DEBUG org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+2021-16-16 14:16:06.146 [main] WARN  org.springframework.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-16-16 14:16:11.154 [main] INFO  org.example.myWork.ToDoListApplication - Starting ToDoListApplication using Java 1.8.0_302 on MacBook-Pro-BSC.local with PID 9525 (/Users/bsc/IdeaProjects/todoList/target/classes started by bsc in /Users/bsc/IdeaProjects/todoList)
+2021-16-16 14:16:11.154 [main] DEBUG org.example.myWork.ToDoListApplication - Running with Spring Boot v2.6.1, Spring v5.3.13
+2021-16-16 14:16:11.155 [main] INFO  org.example.myWork.ToDoListApplication - No active profile set, falling back to default profiles: default
+2021-16-16 14:16:11.155 [main] DEBUG org.springframework.boot.SpringApplication - Loading source class org.example.myWork.ToDoListApplication
+2021-16-16 14:16:11.193 [main] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@700fb871
+2021-16-16 14:16:11.209 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2021-16-16 14:16:11.222 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2021-16-16 14:16:11.277 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/CommandConsumer.class]
+2021-16-16 14:16:11.277 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/ErrorHandlerImpl.class]
+2021-16-16 14:16:11.278 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/TaskDao.class]
+2021-16-16 14:16:11.279 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/TaskIdValidator.class]
+2021-16-16 14:16:11.279 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/TaskPrinter.class]
+2021-16-16 14:16:11.279 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/AddCommand.class]
+2021-16-16 14:16:11.280 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/DeleteCommand.class]
+2021-16-16 14:16:11.280 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/EditCommand.class]
+2021-16-16 14:16:11.280 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/PrintCommand.class]
+2021-16-16 14:16:11.281 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/QuitCommand.class]
+2021-16-16 14:16:11.281 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/SearchCommand.class]
+2021-16-16 14:16:11.281 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/logic/command/ToggleCommand.class]
+2021-16-16 14:16:11.282 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/parser/CommandDescription.class]
+2021-16-16 14:16:11.282 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [/Users/bsc/IdeaProjects/todoList/target/classes/org/example/myWork/parser/CommandParser.class]
+2021-16-16 14:16:11.535 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+2021-16-16 14:16:11.542 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
+2021-16-16 14:16:11.549 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2021-16-16 14:16:11.550 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying'
+2021-16-16 14:16:11.551 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2021-16-16 14:16:11.557 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2021-16-16 14:16:11.559 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2021-16-16 14:16:11.564 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2021-16-16 14:16:11.565 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2021-16-16 14:16:11.565 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinderFactory'
+2021-16-16 14:16:11.567 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2021-16-16 14:16:11.592 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'toDoListApplication'
+2021-16-16 14:16:11.595 [main] DEBUG org.springframework.core.LocalVariableTableParameterNameDiscoverer - Cannot find '.class' file for class [class org.example.myWork.ToDoListApplication$$EnhancerBySpringCGLIB$$c417fe46] - unable to determine constructor/method parameter names
+2021-16-16 14:16:11.597 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandConsumer'
+2021-16-16 14:16:11.601 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'add'
+2021-16-16 14:16:11.602 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskDao'
+2021-16-16 14:16:11.603 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'errorHandlerImpl'
+2021-16-16 14:16:11.604 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'add' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.604 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'add' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.606 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'delete'
+2021-16-16 14:16:11.607 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'delete' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.607 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'delete' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.607 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'edit'
+2021-16-16 14:16:11.608 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'edit' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.608 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'edit' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.609 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'print'
+2021-16-16 14:16:11.610 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskPrinter'
+2021-16-16 14:16:11.610 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'print' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.611 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'print' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.611 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'print' via constructor to bean named 'taskPrinter'
+2021-16-16 14:16:11.611 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'quit'
+2021-16-16 14:16:11.612 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'quit' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.612 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'quit' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.613 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'search'
+2021-16-16 14:16:11.614 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'search' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.614 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'search' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.614 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'search' via constructor to bean named 'taskPrinter'
+2021-16-16 14:16:11.615 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'toggle'
+2021-16-16 14:16:11.615 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toggle' via constructor to bean named 'taskDao'
+2021-16-16 14:16:11.615 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toggle' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.616 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'add'
+2021-16-16 14:16:11.616 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'delete'
+2021-16-16 14:16:11.616 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'edit'
+2021-16-16 14:16:11.616 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'print'
+2021-16-16 14:16:11.617 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'quit'
+2021-16-16 14:16:11.617 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'search'
+2021-16-16 14:16:11.617 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'toggle'
+2021-16-16 14:16:11.617 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'taskPrinter'
+2021-16-16 14:16:11.617 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'commandConsumer' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.618 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandParser'
+2021-16-16 14:16:11.626 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toDoListApplication' via constructor to bean named 'commandConsumer'
+2021-16-16 14:16:11.626 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'toDoListApplication' via constructor to bean named 'commandParser'
+2021-16-16 14:16:11.627 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskIdValidator'
+2021-16-16 14:16:11.628 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'taskIdValidator' via constructor to bean named 'errorHandlerImpl'
+2021-16-16 14:16:11.628 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'commandDescription'
+2021-16-16 14:16:11.629 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2021-16-16 14:16:11.629 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2021-16-16 14:16:11.631 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2021-16-16 14:16:11.632 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2021-16-16 14:16:11.633 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2021-16-16 14:16:11.633 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationAvailability'
+2021-16-16 14:16:11.635 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2021-16-16 14:16:11.636 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2021-16-16 14:16:11.636 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2021-16-16 14:16:11.637 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2021-16-16 14:16:11.637 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'lifecycleProcessor'
+2021-16-16 14:16:11.638 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2021-16-16 14:16:11.647 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'lifecycleProcessor' via factory method to bean named 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2021-16-16 14:16:11.648 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2021-16-16 14:16:11.650 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2021-16-16 14:16:11.651 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2021-16-16 14:16:11.652 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
+2021-16-16 14:16:11.653 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2021-16-16 14:16:11.655 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2021-16-16 14:16:11.656 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecutorBuilder'
+2021-16-16 14:16:11.657 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2021-16-16 14:16:11.660 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'taskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2021-16-16 14:16:11.663 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2021-16-16 14:16:11.665 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'scheduledBeanLazyInitializationExcludeFilter'
+2021-16-16 14:16:11.666 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskSchedulerBuilder'
+2021-16-16 14:16:11.667 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2021-16-16 14:16:11.668 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'taskSchedulerBuilder' via factory method to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2021-16-16 14:16:11.696 [main] DEBUG org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
 
 
 ============================
@@ -741,7 +747,11 @@ Unconditional classes:
 
 
 
-2021-15-15 17:15:26.983 [main] INFO  org.example.myWork.ToDoListApplication - Started ToDoListApplication in 20.886 seconds (JVM running for 26.633)
-2021-15-15 17:15:26.985 [main] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-2021-15-15 17:15:26.988 [main] DEBUG org.example.myWork.parser.CommandParser - User input: add 1
-2021-15-15 17:15:26.988 [main] DEBUG org.example.myWork.parser.CommandParser - User input: print all
+2021-16-16 14:16:11.706 [main] INFO  org.example.myWork.ToDoListApplication - Started ToDoListApplication in 20.958 seconds (JVM running for 26.933)
+2021-16-16 14:16:11.707 [main] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2021-16-16 14:16:11.710 [main] DEBUG org.example.myWork.parser.CommandParser - User input: add 1
+2021-16-16 14:16:11.710 [main] DEBUG org.example.myWork.parser.CommandParser - User input: add 34
+2021-16-16 14:16:11.711 [main] DEBUG org.example.myWork.parser.CommandParser - User input: add 2
+2021-16-16 14:16:11.711 [main] DEBUG org.example.myWork.parser.CommandParser - User input: print all
+2021-16-16 14:16:16.154 [main] DEBUG org.example.myWork.parser.CommandParser - User input: quit
+2021-16-16 14:16:16.157 [SpringApplicationShutdownHook] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@700fb871, started on Thu Dec 16 14:16:11 MSK 2021

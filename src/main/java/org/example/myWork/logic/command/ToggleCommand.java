@@ -6,12 +6,10 @@ import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 import org.springframework.stereotype.Component;
 
-
 import java.util.Optional;
 
-@Component
+@Component("toggle")
 public class ToggleCommand extends BaseCommand {
-    public static final String COMMAND = "toggle";
 
     protected ToggleCommand(ITaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);

@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-@Component
+@Component("edit")
 public class EditCommand extends BaseCommand {
-    public static final String COMMAND = "edit";
+
     protected EditCommand(ITaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);
     }

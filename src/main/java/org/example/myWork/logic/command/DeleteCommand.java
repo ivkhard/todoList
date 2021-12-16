@@ -5,9 +5,8 @@ import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.parser.CommandDescription;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("delete")
 public class DeleteCommand extends BaseCommand {
-    public static final String COMMAND = "delete";
 
     protected DeleteCommand(ITaskDao taskDao, IErrorHandler errorHandler) {
         super(taskDao, errorHandler);

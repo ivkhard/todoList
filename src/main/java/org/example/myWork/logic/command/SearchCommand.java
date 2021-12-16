@@ -9,9 +9,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.stream.Stream;
 
-@Component
-public class SearchCommand extends BaseCommand {
-    public static final String COMMAND = "search";
+@Component("search")
+public class SearchCommand extends BaseCommand{
     private final ITaskPrinter printer;
 
     public SearchCommand(ITaskDao taskDao, IErrorHandler errorHandler, ITaskPrinter printer) {

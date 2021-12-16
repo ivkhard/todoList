@@ -10,7 +10,8 @@ import java.util.regex.Pattern;
 @Slf4j
 @Component
 public class CommandParser implements Function<String, CommandDescription> {
-    private static final Pattern COMMAND_PATTERN = Pattern.compile("\\s*(?<cmd>\\w+)(?:\\s+(?<args>(?:(?<id>\\d+)\\b)?(?<text>.*)))?");
+    private static final Pattern COMMAND_PATTERN = Pattern.compile
+            ("\\s*(?<cmd>\\w+)(?:\\s+(?<args>(?:(?<id>\\d+)\\b)?(?<text>.*)))?");
 
     public CommandDescription apply(String commandLine) {
         log.debug("User input: {}", commandLine);

@@ -7,12 +7,10 @@ import org.example.myWork.model.Task;
 import org.example.myWork.parser.CommandDescription;
 import org.springframework.stereotype.Component;
 
-
 import java.util.stream.Stream;
 
-@Component
+@Component("print")
 public class PrintCommand extends BaseCommand {
-    public static final String COMMAND = "print";
 
     private final ITaskPrinter printer;
 
