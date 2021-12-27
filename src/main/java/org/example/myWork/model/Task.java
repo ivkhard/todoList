@@ -1,13 +1,22 @@
 package org.example.myWork.model;
 
 import lombok.Data;
-import org.springframework.stereotype.Component;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Data
+@Entity
+@Table (name = "Task")
 public class Task {
-    private static final int DEFAULT_ID = -1;
-    private int id = DEFAULT_ID;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @NotBlank
     private String description;
+
     private boolean done;
 
     public static Task of(String description) {

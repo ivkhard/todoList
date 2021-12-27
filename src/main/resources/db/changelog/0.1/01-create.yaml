@@ -1,0 +1,26 @@
+#databaseChangelog:
+#  - changeSet:
+#      id: "01-create"
+#      author: "iv.khard"
+#      changes:
+#        - createTable:
+#            tableName: task
+#            columns:
+#              - column:
+#                  name: id
+#                  type: int
+#                  autoIncrement: true
+#                  concsyrains:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: discription
+#                  type: varchar (512)
+#                  constrains:
+#                    nullable: false
+#              - column:
+#                  name: done
+#                  type: boolean
+#                  defaultValueBoolean: false
+#                  constrains:
+#                    nullable: false

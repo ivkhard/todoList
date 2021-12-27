@@ -1,7 +1,11 @@
 package org.example.myWork.controller;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
-import org.example.myWork.logic.TaskDao;
+import lombok.ToString;
+import org.example.myWork.logic.ICustomTaskDao;
+import org.example.myWork.logic.ITaskDao;
 import org.example.myWork.model.DescriptionHolder;
 import org.example.myWork.model.StatusHolder;
 import org.example.myWork.model.Task;
@@ -14,18 +18,19 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
+@Data
 @RestController
 @RequestMapping("/task")
 @RequiredArgsConstructor
 public class TaskController {
 
-    private final TaskDao taskDao;
+    private final ITaskDao taskDao;
+    private final ICustomTaskDao iCustomTaskDao;
 
     @GetMapping
     public List<Task> task(@RequestParam(name = "q", required = false) String query, @RequestParam(name = "all", required = true) Boolean all) {
-        return taskDao.find(query, !all).collect(Collectors.toList());
+        return iCustomTaskDao.findAllFiltered(query, !all);
     }
 
     @PostMapping
@@ -51,9 +56,11 @@ public class TaskController {
     }
 
     private ResponseEntity<String> processWithId(int id, Consumer<Task> consumer) {
-        Optional<Task> task = taskDao.get(id);
+        Optional<Task> task = Optional.ofNullable(taskDao.findOne(id));
         if (task.isPresent()) {
+            Task t = task.get();
             consumer.accept(task.get());
+            taskDao.save(t);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();

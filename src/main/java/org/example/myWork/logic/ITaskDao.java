@@ -1,16 +1,7 @@
 package org.example.myWork.logic;
 
 import org.example.myWork.model.Task;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.Optional;
-import java.util.stream.Stream;
-
-public interface ITaskDao {
-    void save(Task task);
-
-    Optional<Task> get(long id);
-
-    Stream<Task> find(String query, boolean excludeCompleted);
-
-    void delete(int id);
+public interface ITaskDao extends CrudRepository<Task, Integer> {
 }
