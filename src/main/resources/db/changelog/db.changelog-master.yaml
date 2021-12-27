@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 1
+      author: iv.khard
+      changes:
+        - createTable:
+            tableName: task
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar (512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: done
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: false
