@@ -12,7 +12,7 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class CustomTaskDaoImpl implements ICustomTaskDao {
+public class TaskDaoImpl implements CustomTaskDao {
     private final EntityManager entityManager;
 
     @Override

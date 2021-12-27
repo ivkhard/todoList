@@ -1,11 +1,7 @@
 package org.example.myWork.controller;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-import org.example.myWork.logic.ICustomTaskDao;
-import org.example.myWork.logic.ITaskDao;
+import org.example.myWork.logic.TaskDao;
 import org.example.myWork.model.DescriptionHolder;
 import org.example.myWork.model.StatusHolder;
 import org.example.myWork.model.Task;
@@ -19,18 +15,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-@Data
 @RestController
 @RequestMapping("/task")
 @RequiredArgsConstructor
 public class TaskController {
 
-    private final ITaskDao taskDao;
-    private final ICustomTaskDao iCustomTaskDao;
+    private final TaskDao taskDao;
+//    private final CustomTaskDao iCustomTaskDao;
 
     @GetMapping
     public List<Task> task(@RequestParam(name = "q", required = false) String query, @RequestParam(name = "all", required = true) Boolean all) {
-        return iCustomTaskDao.findAllFiltered(query, !all);
+        return taskDao.findAllFiltered(query, !all);
     }
 
     @PostMapping

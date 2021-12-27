@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ICustomTaskDao {
+public interface CustomTaskDao {
     List<Task> findAllFiltered(String query, boolean excludeCompleted);
 }
