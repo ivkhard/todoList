@@ -1,7 +1,7 @@
 databaseChangeLog:
   - logicalFilePath: db/changelog/db.changelog-master.yaml
   - changeSet:
-      id: 1
+      id: 001
       author: iv.khard
       changes:
         - createTable:
@@ -9,6 +9,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
                   type: int
                   autoIncrement: true
                   constraints:
@@ -25,3 +32,49 @@ databaseChangeLog:
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
+  - changeSet:
+      id: 002
+      author: iv.khard
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: varchar (512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar (50)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 003
+      author: iv.khard
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: username
+                  value: "admin"
+              - column:
+                  name: password
+                  value: "admin"
+              - column:
+                  name: role
+                  value: "ADMIN"

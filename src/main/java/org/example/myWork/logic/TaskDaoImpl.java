@@ -3,6 +3,7 @@ package org.example.myWork.logic;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
 import org.example.myWork.model.Task;
+import org.example.myWork.model.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -16,7 +17,7 @@ public class TaskDaoImpl implements CustomTaskDao {
     private final EntityManager entityManager;
 
     @Override
-    public List<Task> findAllFiltered(String query, boolean excludeCompleted) {
+    public List<Task> findAllFiltered(String query, boolean excludeCompleted, User user) {
         StringBuilder jpql = new StringBuilder("from Task t ");
         List<String> conditions = new ArrayList<>(2);
         if (Strings.isNotBlank(query)) {
