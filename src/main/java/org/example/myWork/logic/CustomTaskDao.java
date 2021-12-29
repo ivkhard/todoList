@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface CustomTaskDao {
-    List<Task> findAllFiltered(String query, boolean excludeCompleted, User user);
+    List<Task> findAllFiltered(String query, boolean excludeCompleted);
 }

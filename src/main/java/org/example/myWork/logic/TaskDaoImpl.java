@@ -17,7 +17,7 @@ public class TaskDaoImpl implements CustomTaskDao {
     private final EntityManager entityManager;
 
     @Override
-    public List<Task> findAllFiltered(String query, boolean excludeCompleted, User user) {
+    public List<Task> findAllFiltered(String query, boolean excludeCompleted) {
         StringBuilder jpql = new StringBuilder("from Task t ");
         List<String> conditions = new ArrayList<>(2);
         if (Strings.isNotBlank(query)) {
