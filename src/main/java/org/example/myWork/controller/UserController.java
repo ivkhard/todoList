@@ -1,7 +1,7 @@
 package org.example.myWork.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.myWork.filter.SecurityConfig;
+import org.example.myWork.config.SecurityConfig;
 import org.example.myWork.logic.UserDao;
 import org.example.myWork.model.User;
 import org.springframework.http.HttpStatus;

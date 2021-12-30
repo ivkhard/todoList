@@ -81,7 +81,8 @@ databaseChangeLog:
               - column:
                   name: user_id
                   type: int
-                  autoIncrement: true
                   constraints:
-                    primaryKey: false
+                    referencedTableName: user
+                    referencedColumnNames: id
+                    foreignKeyName: key
                     nullable: false

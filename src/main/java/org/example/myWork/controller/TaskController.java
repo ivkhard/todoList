@@ -26,12 +26,14 @@ public class TaskController {
 
     @GetMapping
     public List<Task> task(@RequestParam(name = "q", required = false) String query,
-                           @RequestParam(name = "all", required = true) Boolean all) {
-        return taskDao.findAllFiltered(query, !all);
+                           @RequestParam(name = "all", required = true) Boolean all,
+                           @AuthenticationPrincipal User user) {
+        return taskDao.findAllFiltered(query, !all, user);
     }
 
     @PostMapping
-    public ResponseEntity<Task> create(@RequestBody @Valid Task task) {
+    public ResponseEntity<Task> create(@RequestBody @Valid Task task, @AuthenticationPrincipal User user) {
+        task.setOwner(user);
         taskDao.save(task);
         return ResponseEntity.created(URI.create("/task/" + task.getId())).body(task);
     }
