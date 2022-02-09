@@ -1,5 +1,6 @@
 package org.example.myWork.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,6 +19,11 @@ public class Task {
     private String description;
 
     private boolean done;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id", nullable = false, updatable = false)
+    @JsonIgnore
+    private User owner;
 
     public static Task of(String description) {
         Task task = new Task();

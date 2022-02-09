@@ -5,8 +5,10 @@ import org.example.myWork.logic.TaskDao;
 import org.example.myWork.model.DescriptionHolder;
 import org.example.myWork.model.StatusHolder;
 import org.example.myWork.model.Task;
+import org.example.myWork.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -21,15 +23,17 @@ import java.util.function.Consumer;
 public class TaskController {
 
     private final TaskDao taskDao;
-//    private final CustomTaskDao iCustomTaskDao;
 
     @GetMapping
-    public List<Task> task(@RequestParam(name = "q", required = false) String query, @RequestParam(name = "all", required = true) Boolean all) {
-        return taskDao.findAllFiltered(query, !all);
+    public List<Task> task(@RequestParam(name = "q", required = false) String query,
+                           @RequestParam(name = "all", required = true) Boolean all,
+                           @AuthenticationPrincipal User user) {
+        return taskDao.findAllFiltered(query, !all, user);
     }
 
     @PostMapping
-    public ResponseEntity<Task> create(@RequestBody @Valid Task task) {
+    public ResponseEntity<Task> create(@RequestBody @Valid Task task, @AuthenticationPrincipal User user) {
+        task.setOwner(user);
         taskDao.save(task);
         return ResponseEntity.created(URI.create("/task/" + task.getId())).body(task);
     }
