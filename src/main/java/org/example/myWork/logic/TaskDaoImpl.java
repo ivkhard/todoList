@@ -1,5 +1,6 @@
 package org.example.myWork.logic;
 
+import javafx.util.Pair;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
 import org.example.myWork.model.Task;
@@ -18,22 +19,25 @@ public class TaskDaoImpl implements CustomTaskDao {
 
     @Override
     public List<Task> findAllFiltered(String query, boolean excludeCompleted, User user) {
-        StringBuilder jpql = new StringBuilder("from Task t ");
+        StringBuilder jpql = new StringBuilder("SELECT t FROM Task t ");
         List<String> conditions = new ArrayList<>(2);
-        TypedQuery<Task> typedQuery = entityManager.createQuery(jpql.toString(), Task.class);
+        List<Pair<String, Object>> parameters = new ArrayList<>(2);
         if (Strings.isNotBlank(query)) {
             conditions.add("t.description like :desc");
-            typedQuery.setParameter("desc", "%" + query + "%");
+            parameters.add(new Pair<String, Object>("desc", "%" + query + "%"));
         }
         if (excludeCompleted) {
             conditions.add("t.done <> true");
         }
         if (user != null) {
-            conditions.add("t.owner like :");
-            typedQuery.setParameter("own", "%" + user + "%");
+            conditions.add("t.owner.id = " + user.getId());
         }
         if (!conditions.isEmpty()) {
-            jpql.append("where ").append(String.join(" and ", conditions));
+            jpql.append("WHERE ").append(String.join(" AND ", conditions));
+        }
+        TypedQuery<Task> typedQuery = entityManager.createQuery(jpql.toString(), Task.class);
+        for (Pair<String, Object> param : parameters) {
+            typedQuery.setParameter(param.getKey(), param.getValue());
         }
         return typedQuery.getResultList();
     }

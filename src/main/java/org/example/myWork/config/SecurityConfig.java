@@ -22,15 +22,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/admin").hasRole(ADMIN_ROLE)
-                .antMatchers("/task").hasRole(USER_ROLE)
+                .mvcMatchers("/admin/user").hasRole(ADMIN_ROLE)
                 .anyRequest()
                 .authenticated()
                 .and()
                 .httpBasic()
                 .and()
                 .csrf().disable()
-                .formLogin().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
