@@ -41,7 +41,7 @@ public class TaskController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") int id) {
-        taskDao.delete(id);
+        taskDao.deleteById(id);
     }
 
     @PatchMapping("/{id}")
@@ -55,7 +55,7 @@ public class TaskController {
     }
 
     private ResponseEntity<String> processWithId(int id, Consumer<Task> consumer) {
-        Optional<Task> task = Optional.ofNullable(taskDao.findOne(id));
+        Optional<Task> task = taskDao.findById(id);
         if (task.isPresent()) {
             Task t = task.get();
             consumer.accept(task.get());
