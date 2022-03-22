@@ -3,6 +3,7 @@ package org.example.myWork.model;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -10,6 +11,7 @@ import java.util.Collection;
 
 @Data
 @Entity
+@Component
 @Table(name = "\"user\"")
 public class User implements UserDetails {
     @Id

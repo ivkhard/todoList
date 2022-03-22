@@ -3,10 +3,10 @@ package org.example.myWork;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.io.IOException;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
+//        (exclude = {DataSourceAutoConfiguration.class})
 @RequiredArgsConstructor
 public class ToDoListApplication {
 
