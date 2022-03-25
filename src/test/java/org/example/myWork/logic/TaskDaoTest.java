@@ -38,7 +38,6 @@ public class TaskDaoTest {
     @Autowired
     private TaskDao taskDao;
 
-    @Autowired
     private User owner;
 
     @SpyBean
@@ -49,6 +48,7 @@ public class TaskDaoTest {
 
     @Test
     public void findAllFiltered() {
+
         final String expectedQuery = "SELECT t FROM Task t WHERE t.owner.id = :ownerId";
         doReturn(typedQuery).when(entityManager).createQuery(anyString(), eq(Task.class));
 
