@@ -11,7 +11,6 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Component
 @Table(name = "\"user\"")
 public class User implements UserDetails {
     @Id

@@ -3,6 +3,8 @@ package org.example.myWork.logic;
 import org.example.myWork.model.Task;
 import org.example.myWork.model.User;
 import org.hibernate.query.Query;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,11 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.persistence.EntityManager;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
@@ -39,7 +45,13 @@ public class TaskDaoTest {
     private TaskDao taskDao;
 
     @Autowired
+    private UserDao userDao;
+
     private User owner;
+
+    private Task task1;
+
+    private Task task2;
 
     @SpyBean
     private EntityManager entityManager;
@@ -47,15 +59,38 @@ public class TaskDaoTest {
     @Mock
     private Query<Task> typedQuery;
 
+    public void createUserAndTask() {
+        task1 = new Task();
+        task1.setDescription("firstTask");
+
+        task2 = new Task();
+        task2.setDescription("secondTask");
+
+        owner = new User();
+        owner.setId(1);
+        owner.setUsername("user");
+        owner.setPassword("user");
+
+        userDao.save(owner);
+
+        task1.setOwner(owner);
+        taskDao.save(task1);
+
+        task2.setOwner(owner);
+        taskDao.save(task2);
+    }
+
     @Test
     public void findAllFiltered() {
-        final String expectedQuery = "SELECT t FROM Task t WHERE t.owner.id = :ownerId";
-        doReturn(typedQuery).when(entityManager).createQuery(anyString(), eq(Task.class));
 
-        taskDao.findAllFiltered("", false, owner);
+        createUserAndTask();
 
-        verify(entityManager).createQuery(expectedQuery, Task.class);
-        verify(typedQuery).setParameter("ownerId", owner.getId());
+        List<Task> taskList = taskDao.findAllFiltered("Task", false, owner);
+        List<Task> expectedList = new ArrayList<>();
+        expectedList.add(task1);
+        expectedList.add(task2);
+
+        assertTrue(taskList.containsAll(expectedList));
     }
 
     @Test
