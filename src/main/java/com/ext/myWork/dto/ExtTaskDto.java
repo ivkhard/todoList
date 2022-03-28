@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class ExtTaskDto {
-    private Long id;
+    private String taskId;
     private String description;
-    private TaskStatus taskStatus;
+    private Boolean closed;
 }

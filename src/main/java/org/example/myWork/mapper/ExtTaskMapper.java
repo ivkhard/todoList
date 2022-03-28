@@ -9,7 +9,7 @@ import org.mapstruct.Mapping;
 public interface ExtTaskMapper {
     static final String ID_PREFIX = "EXT-";
 
-    @Mapping(target = "id", expression = "java(ID_PREFIX + dto.getId())")
-    @Mapping(target = "done", expression = "java(com.ext.myWork.dto.TaskStatus.COMPLETED == dto.getTaskStatus())")
+    @Mapping(target = "id", expression = "java(ID_PREFIX + dto.getTaskId())")
+    @Mapping(target = "done", expression = "java(dto.getClosed())")
     TaskDto toInternal(ExtTaskDto dto);
 }

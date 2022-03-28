@@ -35,15 +35,15 @@ public class RestTaskServiceImpl implements CustomTaskService {
     @Override
     public Optional<TaskDto> findById(String id) {
         String extId = stripId(id);
-        return restTaskDao.getList("ALL").stream()
-                .filter(dto -> extId.equals(dto.getId()))
+        return restTaskDao.getList().getTasks().stream()
+                .filter(dto -> extId.equals(dto.getTaskId()))
                 .map(taskMapper::toInternal)
                 .findFirst();
     }
 
     @Override
     public List<TaskDto> find(String query, boolean done, User user) {
-        Stream<ExtTaskDto> externalTaskDtos = restTaskDao.getList(done ? "CREATED" : "ALL").stream();
+        Stream<ExtTaskDto> externalTaskDtos = restTaskDao.getList().getTasks().stream();
         if (Strings.isNotBlank(query)) {
             externalTaskDtos = externalTaskDtos.filter(t -> t.getDescription().contains(query));
         }
