@@ -2,11 +2,7 @@ package org.example.myWork.logic;
 
 import org.example.myWork.model.Task;
 import org.example.myWork.model.User;
-import org.hibernate.query.Query;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -14,25 +10,21 @@ import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.persistence.EntityManager;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @ContextConfiguration(initializers = {TaskDaoTest.Initializer.class})
 @Testcontainers
+@Transactional
 public class TaskDaoTest {
 
     @Container
@@ -44,9 +36,6 @@ public class TaskDaoTest {
     @Autowired
     private TaskDao taskDao;
 
-    @Autowired
-    private UserDao userDao;
-
     private User owner;
 
     private Task task1;
@@ -56,9 +45,6 @@ public class TaskDaoTest {
     @SpyBean
     private EntityManager entityManager;
 
-    @Mock
-    private Query<Task> typedQuery;
-
     public void createUserAndTask() {
         task1 = new Task();
         task1.setDescription("firstTask");
@@ -67,17 +53,16 @@ public class TaskDaoTest {
         task2.setDescription("secondTask");
 
         owner = new User();
-        owner.setId(1);
         owner.setUsername("user");
         owner.setPassword("user");
 
-        userDao.save(owner);
+        entityManager.persist(owner);
 
         task1.setOwner(owner);
-        taskDao.save(task1);
+        entityManager.persist(task1);
 
         task2.setOwner(owner);
-        taskDao.save(task2);
+        entityManager.persist(task2);
     }
 
     @Test
