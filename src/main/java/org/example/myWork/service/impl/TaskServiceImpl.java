@@ -1,4 +1,4 @@
-package org.example.myWork.service;
+package org.example.myWork.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.example.myWork.dto.TaskDto;
@@ -6,6 +6,7 @@ import org.example.myWork.logic.TaskDao;
 import org.example.myWork.mapper.TaskMapper;
 import org.example.myWork.model.Task;
 import org.example.myWork.model.User;
+import org.example.myWork.service.CustomTaskService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

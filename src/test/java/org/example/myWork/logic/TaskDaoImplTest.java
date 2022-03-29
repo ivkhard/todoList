@@ -1,5 +1,6 @@
 package org.example.myWork.logic;
 
+import org.example.myWork.logic.impl.TaskDaoImpl;
 import org.example.myWork.model.Task;
 import org.example.myWork.model.User;
 import org.junit.jupiter.api.BeforeAll;

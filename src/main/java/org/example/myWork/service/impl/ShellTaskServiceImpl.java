@@ -1,15 +1,17 @@
-package org.example.myWork.service;
+package org.example.myWork.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.myWork.dto.TaskDto;
 import org.example.myWork.model.User;
+import org.example.myWork.service.CustomTaskService;
+import org.example.myWork.service.ShellTaskService;
+import org.example.myWork.service.TaskService;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 
 @Component
 @RequiredArgsConstructor

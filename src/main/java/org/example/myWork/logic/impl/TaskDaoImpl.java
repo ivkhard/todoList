@@ -1,7 +1,8 @@
-package org.example.myWork.logic;
+package org.example.myWork.logic.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
+import org.example.myWork.logic.CustomTaskDao;
 import org.example.myWork.model.Task;
 import org.example.myWork.model.User;
 import org.springframework.stereotype.Repository;

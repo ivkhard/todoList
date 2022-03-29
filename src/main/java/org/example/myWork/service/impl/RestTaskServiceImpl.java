@@ -1,4 +1,4 @@
-package org.example.myWork.service;
+package org.example.myWork.service.impl;
 
 import com.ext.myWork.dto.ExtTaskDto;
 import lombok.RequiredArgsConstructor;
@@ -6,6 +6,8 @@ import org.apache.logging.log4j.util.Strings;
 import org.example.myWork.dto.TaskDto;
 import org.example.myWork.mapper.ExtTaskMapper;
 import org.example.myWork.model.User;
+import org.example.myWork.service.CustomTaskService;
+import org.example.myWork.service.RestTaskDao;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -57,10 +59,10 @@ public class RestTaskServiceImpl implements CustomTaskService {
 
     @Override
     public void update(TaskDto t) {
-        restTaskDao.editTask(stripId(t.getId()), t.getDescription());
+        restTaskDao.changeTask(stripId(t.getId()), t.getDescription(), false);
     }
 
-    private static String stripId (String id) {
+    private static String stripId(String id) {
         return id.substring(ID_PREFIX.length());
     }
 }

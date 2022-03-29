@@ -14,9 +14,9 @@ public interface RestTaskDao {
     @GetMapping("/task")
     ExtTaskResponse getList();
 
-    @DeleteMapping("/{id}")
-    void deleteTask(@PathVariable(value = "id") String id);
+    @DeleteMapping("/task/{task_id}")
+    void deleteTask(@PathVariable(value = "task_id") String id);
 
-    @PatchMapping("/{id}")
-    ExtTaskDto editTask(@PathVariable(value = "id") String id, @RequestParam(value = "description") String description);
+    @PatchMapping("/task/{task_id}")
+    ExtTaskDto changeTask(@PathVariable(value = "task_id") String id, @RequestParam(value = "description") String description, Boolean closed);
 }

@@ -6,7 +6,6 @@ import org.example.myWork.model.User;
 import java.util.List;
 import java.util.Optional;
 
-
 public interface TaskService {
 
     void deleteById(String id);
