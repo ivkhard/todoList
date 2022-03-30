@@ -7,7 +7,7 @@ import org.example.myWork.dto.TaskDto;
 import org.example.myWork.mapper.ExtTaskMapper;
 import org.example.myWork.model.User;
 import org.example.myWork.service.CustomTaskService;
-import org.example.myWork.service.RestTaskDao;
+import org.example.myWork.logic.RestTaskDao;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.example.myWork.model;
+package com.ext.myWork.dto.response;
 
 import com.ext.myWork.dto.ExtTaskDto;
 import lombok.Data;
