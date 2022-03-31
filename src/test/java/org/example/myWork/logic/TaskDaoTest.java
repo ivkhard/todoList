@@ -2,9 +2,7 @@ package org.example.myWork.logic;
 
 import org.example.myWork.model.Task;
 import org.example.myWork.model.User;
-import org.hibernate.query.Query;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -12,21 +10,21 @@ import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
 
 @SpringBootTest
 @ContextConfiguration(initializers = {TaskDaoTest.Initializer.class})
 @Testcontainers
+@Transactional
 public class TaskDaoTest {
 
     @Container
@@ -40,22 +38,49 @@ public class TaskDaoTest {
 
     private User owner;
 
+    private Task task1;
+
+    private Task task2;
+
     @SpyBean
     private EntityManager entityManager;
 
-    @Mock
-    private Query<Task> typedQuery;
+    public void createUserAndTask() {
+        task1 = new Task();
+        task1.setDescription("firstTask");
+
+        task2 = new Task();
+        task2.setDescription("secondTask");
+
+        owner = new User();
+        owner.setUsername("user");
+        owner.setPassword("user");
+
+        entityManager.persist(owner);
+
+        task1.setOwner(owner);
+        entityManager.persist(task1);
+
+        task2.setOwner(owner);
+        entityManager.persist(task2);
+    }
 
     @Test
     public void findAllFiltered() {
 
+
         final String expectedQuery = "SELECT t FROM Task t WHERE t.owner.id = :ownerId";
         doReturn(typedQuery).when(entityManager).createQuery(anyString(), eq(Task.class));
 
-        taskDao.findAllFiltered("", false, owner);
 
-        verify(entityManager).createQuery(expectedQuery, Task.class);
-        verify(typedQuery).setParameter("ownerId", owner.getId());
+        createUserAndTask();
+
+        List<Task> taskList = taskDao.findAllFiltered("Task", false, owner);
+        List<Task> expectedList = new ArrayList<>();
+        expectedList.add(task1);
+        expectedList.add(task2);
+
+        assertTrue(taskList.containsAll(expectedList));
     }
 
     @Test
