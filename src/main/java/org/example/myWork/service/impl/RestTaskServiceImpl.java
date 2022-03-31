@@ -6,12 +6,16 @@ import org.apache.logging.log4j.util.Strings;
 import org.example.myWork.dto.TaskDto;
 import org.example.myWork.mapper.ExtTaskMapper;
 import org.example.myWork.model.User;
+import org.example.myWork.service.AsyncTaskService;
 import org.example.myWork.service.CustomTaskService;
 import org.example.myWork.logic.RestTaskDao;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,7 +23,7 @@ import static org.example.myWork.mapper.ExtTaskMapper.ID_PREFIX;
 
 @Service
 @RequiredArgsConstructor
-public class RestTaskServiceImpl implements CustomTaskService {
+public class RestTaskServiceImpl implements CustomTaskService, AsyncTaskService {
 
     private final RestTaskDao restTaskDao;
     private final ExtTaskMapper taskMapper;
@@ -64,5 +68,11 @@ public class RestTaskServiceImpl implements CustomTaskService {
 
     private static String stripId(String id) {
         return id.substring(ID_PREFIX.length());
+    }
+
+    @Override
+    @Async
+    public Future<List<TaskDto>> findAsync(String query, boolean done, User user) {
+        return AsyncResult.forValue(find(query, done, user));
     }
 }
