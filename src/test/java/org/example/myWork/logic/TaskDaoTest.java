@@ -68,6 +68,11 @@ public class TaskDaoTest {
     @Test
     public void findAllFiltered() {
 
+
+        final String expectedQuery = "SELECT t FROM Task t WHERE t.owner.id = :ownerId";
+        doReturn(typedQuery).when(entityManager).createQuery(anyString(), eq(Task.class));
+
+
         createUserAndTask();
 
         List<Task> taskList = taskDao.findAllFiltered("Task", false, owner);

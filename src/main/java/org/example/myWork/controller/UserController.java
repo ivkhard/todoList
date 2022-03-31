@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
     private final UserDao userDao;
-
     private final PasswordEncoder passwordEncoder;
 
     @PutMapping
